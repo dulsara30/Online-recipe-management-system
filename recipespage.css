@@ -36,7 +36,27 @@ body::-webkit-scrollbar{
     outline: none;
 }
 
-.recipesearch button{
+input[type="search"] {
+    padding: 5px 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    text-align: center;
+    
+
+}
+
+input[type="search"]:hover {
+    background-color: #0056b3;
+}
+
+.search{
+    margin: 5px auto;
+}
+
+/*.recipesearch .button{
     padding: 8px 20px;
     margin-left: 120px;
     border: none;
@@ -46,7 +66,7 @@ body::-webkit-scrollbar{
     cursor: pointer;
     outline: none;
 
-}
+}*/
 
 .recipesearch button:hover{
     background-color: #0056b3;
@@ -109,7 +129,8 @@ body::-webkit-scrollbar{
     /*background:linear-gradient(45deg, blueviolet, lightgreen);*/
     background:linear-gradient(45deg, rgb(132, 131, 133), rgb(255, 255, 255));
     padding:20px 9%;
-    padding-bottom: 200%;
+    padding-bottom: 400px;
+    height: 2000px;
 }
 
 .recipesfurther{
@@ -117,7 +138,7 @@ body::-webkit-scrollbar{
 }
 
 .div{
-    height: 406px;
+    height: 430px;
 }
 
 

@@ -1,0 +1,251 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: antiquewhite;
+}
+
+.title{
+    font-size: 40px;
+    initial-letter: 5px;
+    word-spacing: 7px;
+}
+.container {
+    display: flex;
+    width: 100%;
+    margin: 20px auto;
+    padding: 20px;
+    
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+.section1 {
+    border-radius: 10px;
+    width: 400px;
+    margin-bottom: 20px;
+    background-color: #fea14373;
+    margin-left: 10px;
+    padding: 20px;
+}
+
+.section2 {
+    border-radius: 10px;
+    width: 1100px;
+    background-color: #fea043;
+    margin: px auto;
+    margin-left: 20px;
+    padding: 20px;
+
+}
+
+label {
+    margin-top: 10px;
+}
+
+textarea
+select {
+    width: 500px;
+    padding: 10px;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+    margin-right: 5px;
+}
+
+input[type="submit"] {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    margin: 10px auto;
+    padding: 10px;
+    width: 200px;
+
+}
+
+input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+.btn{
+
+    justify-content: center;
+    display: flex;
+}
+
+.myrecipe{
+    height: 40px;
+    width: 200px;
+    background-color: lightgreen;
+    border-radius: 20px;
+    border: none;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+    font-weight: bold;
+
+}
+
+.myrecipe:hover{
+    transform: scale(1.125);
+    background-color: rgb(29, 220, 29);
+    color: white;
+}
+
+.txta,
+.keywords{
+    width: 975px;
+    height: 150px;
+    border-radius: 20px;
+    border: #d5d4d4;
+    text-align: center;
+}
+
+
+
+
+.recname,
+.imglink{
+    width: 300px;
+    height: 30px;
+    border: none;
+    border-radius: 20px;
+    text-align: center;
+}
+
+.vegnonveg {
+    /*display: block;*/
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.vegnonveg input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+    border: 1px solid #ccc;
+    border-radius: 50%;
+}
+
+.vegnonveg:hover input ~ .checkmark {
+    background-color: #f0f0f0;
+}
+
+.vegnonveg input:checked ~ .checkmark {
+    background-color: #2196F3;
+}
+
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.vegnonveg input:checked ~ .checkmark:after {
+    display: block;
+}
+
+.checkmark:after {
+    left: 9px;
+    top: 9px;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: white;
+}
+
+.label ul{
+    list-style-type: none;
+    padding: 0;
+}
+
+.label ul li{
+    margin-bottom: 10px;
+}
+
+.label .label1{
+    display: inline-block;
+    position: relative;
+    padding-left: 30px;
+    cursor: pointer;
+    font-size: 16px;
+    line-height: 1.5;
+}
+.errors{
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 10px;
+}
+
+.search{
+    background-color: #fea043;
+    width: 300px;
+    height: 300px;
+    border-radius: 20px;
+    text-align: center;
+}
+
+.mg{
+    padding: 10px;
+    font-size: 10px;
+    background-color: red;
+    color: white;
+    font-weight: bold;
+    border-radius: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease;
+    cursor: pointer;
+
+}
+
+.mg:hover{
+    transform: scale(1.3);
+}
+
+.input{
+    flex:2;
+    background-color: #f8f9fa;
+    width: 250px;
+    border: none;
+    padding: 8px;
+    border-radius: 20px;
+    outline: none;
+    margin: 10px auto;
+}
+
+input[type="search"] {
+    padding: 5px 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    text-align: center;
+    
+
+}
+
+input[type="search"]:hover {
+    background-color: #0056b3;
+}
