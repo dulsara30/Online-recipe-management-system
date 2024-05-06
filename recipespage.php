@@ -59,7 +59,7 @@ $recipes = mysqli_query($connection, $query);
             </form>
             <!--<input class="search" type="search" action="recipespage.php" value="Search">-->
         </div>
-        <label class="vegnonveg">
+        <!--<label class="vegnonveg">
             <input type="radio" name="veg" value="veggie">
             <span class="checkmark"></span>
             Veggie
@@ -68,7 +68,7 @@ $recipes = mysqli_query($connection, $query);
             <input type="radio" name="veg" value="nonVeggie">
             <span class="checkmark"></span>
             Non-Veggie
-        </label>
+        </label>-->
 
 
 

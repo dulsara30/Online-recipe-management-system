@@ -2,7 +2,9 @@ body, html{
     margin: 0;
     padding: 0;
     height: 100%;
-    background-image: url('https://i.pinimg.com/564x/31/3a/22/313a2274873f81467992d6faf8f941e3.jpg');
+    background-image: url('https://i.pinimg.com/564x/66/5c/03/665c0331560bd24249a241c6332abf78.jpg');
+    color:black;
+    background-size: cover;
 }
 .container{
     left: 0;
@@ -11,15 +13,10 @@ body, html{
     height: 100%;
     backdrop-filter: blur(1.5px);
 }
-
 .topic{
-    color:#f8f8f8;
+    color:#000000;
 }
 
-.form-actions{
-    width: 20%;
-    margin-left: auto;
-}
 
 .field{
     position: absolute;
@@ -157,7 +154,7 @@ input.data:focus {
     padding: 20px; /* Adds some spacing around the buttons */
 }
 
-.edit-btn {
+.usubmit-btn {
     padding: 10px 20px; /* Adds padding inside the button for better appearance */
     margin-left: 10px; /* Adds margin between buttons */
     cursor: pointer; /* Changes cursor to pointer on hover */
@@ -167,8 +164,21 @@ input.data:focus {
     border-radius: 5px; /* Rounds corners of the buttons */
 }
 
-.edit-btn:hover {
+.usubmit-btn:hover {
     background-color: #367B37; /* Darker shade on hover for better interaction feedback */
 }
 
 
+.dsubmit-btn {
+    padding: 10px 20px; /* Adds padding inside the button for better appearance */
+    margin-left: 10px; /* Adds margin between buttons */
+    cursor: pointer; /* Changes cursor to pointer on hover */
+    background-color: #af4c4c; /* Example background color */
+    color: white; /* Text color */
+    border: none; /* Removes border */
+    border-radius: 5px; /* Rounds corners of the buttons */
+}
+
+.dsubmit-btn:hover {
+    background-color: #8d1818; /* Darker shade on hover for better interaction feedback */
+}

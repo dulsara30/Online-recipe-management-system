@@ -1,5 +1,5 @@
 <?php require('connection.php'); ?>
-<?php require('headerL.php'); ?>
+<?php require('header.php'); ?>
 
 <?php
 if (isset($_GET['recipe_id'])) {
@@ -23,18 +23,6 @@ if (isset($_GET['recipe_id'])) {
             $ingredients = $recipedetails['ingredients'];
             $process = $recipedetails['process'];
             $nutrition = $recipedetails['nutrition'];
-            $user_id = $recipedetails['user_id'];
-
-            $sql = "SELECT first_name FROM registered_user WHERE user_id = {$user_id} LIMIT 1";
-
-            $result_set = mysqli_query($connection, $sql);
-
-            if ($result_set) {
-                $posted_by = mysqli_fetch_assoc($result_set);
-                $user_id = $posted_by['first_name'];
-            } else {
-                echo 'no no no !';
-            }
         } else {
             //recipe not found
             header('Location: recipespage.php?error=recipe_not_found');
@@ -64,7 +52,7 @@ if (isset($_GET['recipe_id'])) {
                 <img src="<?php echo $recipe_img ?>" class="recipeimg">
                 <p class="recipename"><?php echo $recipe_name ?></p>
             </div>
-            <p class="posted by">Posted by: <?php echo $user_id ?></p>
+            <p class="posted by">Posted by: Username</p>
             <p class="ratings"><i class="fas fa-star"></i> Rating: 4.8</p>
             <div class="icons">
                 <article class="art">
@@ -99,7 +87,7 @@ if (isset($_GET['recipe_id'])) {
                         <li><?php echo '<a href="recipedetailspagenutrition.php?recipe_id=' . $recipe_id . '">Nutrition</a></li>'; ?>
                     </button>
                     <button class="nav1">
-                        <li><?php echo '<a href="recipedetailspagec.php?recipe_id=' . $recipe_id . '">Comments</a></li>'; ?>
+                        <li><?php echo '<a href="recipedetailspagec&r.php?recipe_id=' . $recipe_id . '">Comments</a></li>'; ?>
                     </button>
                 </ul>
             </nav>

@@ -12,12 +12,8 @@
     </ul>
   </section>
 
-  <section>
-    <ul>
-      <li><a href="">Barcode</a></li>
-      <li><a href="">Barcode</a></li>
-      <li><a href="">Barcode</a></li>
-    </ul>
+  <section class="img">
+    <img src="https://i.pinimg.com/736x/05/ce/a9/05cea9c0f6145a493e8932ac7bad2890.jpg">
   </section>
   <section>
     <ul>

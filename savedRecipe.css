@@ -1,0 +1,47 @@
+body{
+    background-color: antiquewhite;
+}
+.topic{
+    text-align: center;
+    font-size: 90px;
+    font-family:'Times New Roman', Times, serif;
+    color:chocolate;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+.description{
+    color: black;
+    font-size: x-large;
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+h2{
+    margin: 0;
+    padding: 10px;
+    background-color:burlywood; /* Optional: Add background color for title */
+    border: 2px solid black;
+    border-bottom: 1px solid #ccc; /* Optional: Add border for title separation */
+}
+.container {
+    display: flex;
+    justify-content:space-between;
+    overflow-x: hidden; /* Hide horizontal overflow */
+    width: 100%;
+  }
+  
+  .scrollable {
+    flex: 1;
+    overflow-y: scroll; /* Enable vertical scrolling */
+    max-height: 350px; /* Set maximum height for the divisions */
+    border: 3px solid black; /* Optional: Add border for visibility */
+    padding: 10px; /* Optional: Add padding for spacing */
+    margin-right: 20px;
+    margin-bottom: 50px;
+    margin-left: 40px;
+  }
+img{
+    width: 80%;
+    height: 80%;
+    margin-top: 10px;
+}  

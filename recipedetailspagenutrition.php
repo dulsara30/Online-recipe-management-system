@@ -99,7 +99,7 @@ if (isset($_GET['recipe_id'])) {
                         <li><?php echo '<a href="recipedetailspagenutrition.php?recipe_id=' . $recipe_id . '">Nutrition</a></li>'; ?>
                     </button>
                     <button class="nav1">
-                        <li><?php echo '<a href="recipedetailspagec&r.php?recipe_id=' . $recipe_id . '">Comment & Rating</a></li>'; ?>
+                        <li><?php echo '<a href="recipedetailspagec.php?recipe_id=' . $recipe_id . '">Comment</a></li>'; ?>
                     </button>
                 </ul>
             </nav>

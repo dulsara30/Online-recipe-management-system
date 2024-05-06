@@ -249,3 +249,40 @@ input[type="search"] {
 input[type="search"]:hover {
     background-color: #0056b3;
 }
+.div{
+    margin: 50px;
+    
+}
+
+.div img{
+    position: relative;
+    width: 250px;
+    height: 250px;
+    border: 2px  black;
+    box-shadow: 0 0 10px 5px rgba(0,0,0,0.5);
+    border-radius: 5%;
+    transition: transform 0.3s ease;
+    margin-top: -30px;
+    z-index: 999;
+}
+
+.div img:hover{
+    transform: scale(1.5);
+}
+.delete{
+    background-color: #e52309;
+    color: white;
+    font-weight: bold;
+    border: none;
+    width: 200px;
+    height: 40px;
+    border-radius: 10px;
+
+    cursor: pointer;
+    margin: 10px;
+    
+}
+
+.delete:hover{
+    background-color: #bc3928;
+}

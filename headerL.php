@@ -10,6 +10,11 @@
         <nav class="nav">
             <ul>
                 <li><a href="homepageL.php">Home</a></li>
+                <?php
+                if (strpos($_SESSION['email'], '@orms.admin') !== false) {
+                    echo "<li><a href='Admin.php'>Admin Dashboard</a></li>";
+                }
+                ?>
                 <li><a href="">About Us</a></li>
                 <li><a href="recipespageL.php">Recipes</a></li>
                 <li><a href="help.php">Help</a></li>

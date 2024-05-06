@@ -24,14 +24,7 @@
 
     </div>
 
-    <script>
-        document.querySelector('.btn1').addEventListener('click', function() {
-            window.location.href = 'login.php';
-        });
-        document.querySelector('.btn2').addEventListener('click', function() {
-            window.location.href = 'register.php';
-        });
-    </script>
+
 
 
 

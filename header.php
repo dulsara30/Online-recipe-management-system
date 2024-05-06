@@ -12,7 +12,7 @@
         <li><a href="recipespage.php">Recipes</a></li>
         <li><a href="help.php">Help</a></li>
         <li><a href="login.php">Login</a></li>
-        <li><a href="signup.php">Sign up</a></li>
+        <li><a href="register.php">Sign up</a></li>
       </ul>
     </nav>
   </div>

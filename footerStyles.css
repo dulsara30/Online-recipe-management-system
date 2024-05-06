@@ -20,6 +20,12 @@ footer{
     display: inline-block; /* Ensures the box wraps around the text */
     color: white;
   }
+
+  .img img{
+    margin: 10px auto;
+     width: 200px;
+     height: 200px;
+  }
   
   footer section ul{
     list-style: none;

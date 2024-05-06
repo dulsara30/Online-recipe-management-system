@@ -15,7 +15,6 @@ $ingredients = '';
 $process = '';
 $nutrition = '';
 $keywords = '';
-$vegetarian = '';
 $prep_time = '';
 $cook_time = '';
 $servings = '';
@@ -31,7 +30,7 @@ if (isset($_GET['recipe_id'])) {
 
     if ($result) {
         if (mysqli_num_rows($result) == 1) {
-            echo 'recipe found';
+
 
             $recipedetails = mysqli_fetch_assoc($result);
             $recipe_id = $recipedetails['recipe_id'];
@@ -47,8 +46,8 @@ if (isset($_GET['recipe_id'])) {
             $user_id = $recipedetails['user_id'];
 
 
+
             if (isset($_POST['submit'])) {
-                echo "<script>alert('Recipe updated successfully!');</script>";
 
                 if (strlen(trim($_POST['recipe_name'])) > 100) {
                     $errors[] = 'recipe_name must be less than 100 characters';
@@ -63,7 +62,7 @@ if (isset($_GET['recipe_id'])) {
                     $result = mysqli_query($connection, $query);
 
                     if ($result) {
-                        echo '222';
+
                         if (mysqli_num_rows($result) > 0) {
                             $errors[] = 'Recipe name already exists';
                         }
@@ -73,7 +72,6 @@ if (isset($_GET['recipe_id'])) {
 
                         $recipe_name = mysqli_real_escape_string($connection, $_POST['recipe_name']);
                         $recipe_img = mysqli_real_escape_string($connection, $_POST['recipe_img']);
-                        $vegetarian = mysqli_real_escape_string($connection, $_POST['vegetarian']);
                         $prep_time = mysqli_real_escape_string($connection, $_POST['prep_time']);
                         $cook_time = mysqli_real_escape_string($connection, $_POST['cook_time']);
                         $servings = mysqli_real_escape_string($connection, $_POST['servings']);
@@ -91,7 +89,6 @@ if (isset($_GET['recipe_id'])) {
                 prep_time = '{$prep_time}', 
                 cook_time = '{$cook_time}', 
                 servings = '{$servings}', 
-                vegetarian = '{$vegetarian}', 
                 keywords = '{$keywords}' 
                 WHERE recipe_id = '{$recipe_id}'";
 
@@ -107,6 +104,20 @@ if (isset($_GET['recipe_id'])) {
                 }
             } else {
             }
+        }
+    }
+
+    if (isset($_POST['delete'])) {
+        $recipe_id = mysqli_real_escape_string($connection, $_POST['recipe_id']);
+
+        $query = "DELETE FROM recipes WHERE recipe_id = '{$recipe_id}'";
+
+        $result = mysqli_query($connection, $query);
+
+        if ($result) {
+            header('Location: myrecipepage.php');
+        } else {
+            echo "Error deleting recipe: " . mysqli_error($connection);
         }
     }
 }
@@ -140,7 +151,7 @@ if (isset($_GET['recipe_id'])) {
 
     ?>
 
-    <form action="editrecipe.php" method="post">
+    <form action="" method="post">
         <input type="hidden" name="recipe_id" value="<?php echo $recipe_id; ?>">
 
         <div class="container">
@@ -169,28 +180,9 @@ if (isset($_GET['recipe_id'])) {
                 </label><br>
                 <input type="url" class="imglink" id="recipe_img" name="recipe_img" <?php echo 'value="' . $recipe_img . '"'; ?> required><br><br>
 
-                <label>
-                    <h3>Vegetarian:</h3>
-                </label><br>
-                <label for="vegetarian_yes" class="vegnonveg"><input type="radio" id="vegetarian_yes" name="vegetarian" value="veg"><span class="checkmark"></span> Yes</label>
-                <label for="vegetarian_no" class="vegnonveg"><input type="radio" id="vegetarian_no" name="vegetarian" value="non"><span class="checkmark"></span> No</label><br><br>
-                <div class="label">
-                    <label>
-                        <h3>Categories:</h3>
-                    </label><br>
-                    <ul>
-                        <li><label class="label1" for="appetizers"><input type="checkbox" id="appetizers" name="category[]" value="appetizers">Appetizers</label></li>
-                        <li><label class="label1" for="soups_salads"><input type="checkbox" id="soups_salads" name="category[]" value="soups_salads">Soups and Salads</label></li>
-                        <li><label class="label1" for="main_dishes"><input type="checkbox" id="main_dishes" name="category[]" value="main_dishes">Main Dishes</label></li>
-                        <li><label class="label1" for="side_dishes"><input type="checkbox" id="side_dishes" name="category[]" value="side_dishes">Side Dishes</label></li>
-                        <li><label class="label1" for="breakfast"><input type="checkbox" id="breakfast" name="category[]" value="breakfast">Breakfast</label></li>
-                        <li><label class="label1" for="brunch"><input type="checkbox" id="brunch" name="category[]" value="brunch">Brunch</label></li>
-                        <li><label class="label1" for="lunch"><input type="checkbox" id="lunch" name="category[]" value="lunch">Lunch</label></li>
-                        <li><label class="label1" for="dinner"><input type="checkbox" id="dinner" name="category[]" value="dinner">Dinner</label></li>
-                        <li><label class="label1" for="desserts"><input type="checkbox" id="desserts" name="category[]" value="desserts">Desserts</label></li>
-                        <li><label class="label1" for="beverages"><input type="checkbox" id="beverages" name="category[]" value="beverages">Beverages</label></li>
-                        <li><label class="label1" for="snacks"><input type="checkbox" id="snacks" name="category[]" value="snacks">Snacks</label><br><br></li>
-                    </ul>
+
+                <div class="div">
+                    <img src="<?php echo $recipe_img; ?>">
                 </div>
                 <label for="prep_time">
                     <h3>Prep Time(in minutes):</h3>
@@ -230,11 +222,12 @@ if (isset($_GET['recipe_id'])) {
                 <textarea type="text" class="keywords" placeholder="Enter relevant keywords or tags that describthe recipe, separated by commas." id="keywords" name="keywords" required><?php echo $keywords; ?></textarea><br><br>
 
                 <input type="submit" name="submit" class="submit" value="Modify">
-
-
+                <input type="submit" class="delete" name="delete" value="Delete Recipe" onclick="return confirm('Are You Sure?');">
             </div>
         </div>
+
     </form>
+
 </body>
 
 </html>

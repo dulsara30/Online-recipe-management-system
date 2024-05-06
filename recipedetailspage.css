@@ -58,6 +58,8 @@
     box-shadow: 0 5px 10px rgba(0,0,0,.2);
     cursor: pointer;
     transition: transform 0.3s ease;
+    width: 200px;
+    height: 50px;
 }
 
 .saverecipe:hover{
@@ -153,11 +155,11 @@
     height: 450px;
     background-color: #f8c796;
     border: 2px solid rgb(96, 96, 96);
-    border-radius: 20px;
     margin: 20px;
     margin-left: 100px;
     margin-top: -10px;
     box-shadow: 0 10px 10px rgba(0,0,0,.2);
+    overflow-y: scroll;
 }
 
 .art{
@@ -172,4 +174,87 @@
 .content h1{
     color: black;
     font-weight: bold;
+}
+
+textarea {
+    width: 500px;
+    height: 80px;
+    background-color:#fff;
+    resize: none;
+
+}
+
+button {
+    width: 100px;
+    height: 30px;
+    background-color: #282828;
+    border: none;
+    color: #dddddd;
+    font-family: arial;
+    font-weight: 400px;
+    cursor: pointer;
+}
+
+input[type="submit"] {
+    width: 100px;
+    height: 30px;
+    background-color: #282828;
+    border:none;
+    color: #fff;
+    font-family: arial;
+    font-weight: 400px;
+    cursor: pointer;
+}
+
+.comment-box
+{
+    width: 1000px;
+    padding: 20px;
+    margin-bottom: 4px;
+    background-color: #f8c796;
+    border: 2px solid black;
+    position: relative;
+    margin: 10px;
+
+}
+
+.comment-box p
+{
+    font-family: arial;
+    font-size: 14px;
+    line-height: 16px;
+    color: #282828;
+    font-weight: 100;
+}
+
+button 
+{
+    width: 100px;
+    height: 30px;
+    cursor: pointer;
+    background-color: #282828;
+    border:none;
+    color: #fff;
+    font-family: arial;
+    font-weight: 400px;
+}
+
+.edit-btn
+{
+    position: absolute;
+    top: 0px;
+    right: 15px;
+    text-align: center;
+}
+
+.delete-form
+{
+    width: 100px;
+    height: 30px;
+    cursor: pointer;
+    background-color: #282828;
+    border:none;
+    color: #fff;
+    font-family: arial;
+    font-weight: 400px;
 }

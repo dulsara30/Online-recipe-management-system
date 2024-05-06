@@ -43,9 +43,17 @@ if (isset($_POST['login'])) {
                 $user = mysqli_fetch_assoc($result_set);
                 $_SESSION['user_id'] = $user['user_id'];
                 $_SESSION['first_name'] = $user['first_name'];
+                $_SESSION['email'] = $user['email'];
+
+                if (strpos($_SESSION['email'], '@orms.admin') !== false) {
+                    header('Location: Admin.php');
+                    exit;
+                } else {
+                    header('Location: homepageL.php');
+                }
                 // valid user found
                 // redirect to users.php
-                header('Location: homepageL.php');
+
             } else {
                 // user name and password invalid
                 $errors[] = 'Invalid Username / Password';
