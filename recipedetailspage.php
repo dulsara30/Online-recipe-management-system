@@ -70,7 +70,7 @@ if (isset($_GET['recipe_id'])) {
                 <p class="recipename"><?php echo $recipe_name ?></p>
             </div>
             <p class="posted by">Posted by: <?php echo $user_id ?></p>
-            <p class="ratings"><i class="fas fa-star"></i> Rating: 4.8</p>
+            <!--<p class="ratings"><i class="fas fa-star"></i> Rating: 4.8</p>-->
             <div class="icons">
                 <article class="art">
                     <i class="fas fa-clock"></i>
@@ -109,18 +109,19 @@ if (isset($_GET['recipe_id'])) {
                 </ul>
             </nav>
             <div class="content">
-                <h1>Ingredients
-                    <br>
-                    <p class="content1" id="ingredients" style="display:none">
-                        <?php echo $ingredients ?>
-                    </p>
-                </h1>
+                <h1>Ingredients</h1>
+                <br>
+                <p class="content1" id="ingredients">
+                    <?php echo $ingredients ?>
+
+                </p>
+
             </div>
             <!-- <div class="content">
                 <h1>Process
                     <br>
                     <p class="content1" id="process">
-                        <?php echo $process ?>
+            
                     </p>
                 </h1>
             </div>-->

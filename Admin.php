@@ -28,14 +28,14 @@ if (!isset($_SESSION['user_id'])) {
             <h2>Admin Dashboard</h2>
 
             <ul>
-                <li><button class="sidebarbtn">Home</button></li>
+                <li><a href="homepageL.php"> <button class="sidebarbtn">Home</button></a></li>
                 <li><button class="sidebarbtn">Recipe Management</button></li>
                 <li><button class="sidebarbtn">Backup and Restore</button></li>
                 <li id="reportItems">
                     <button id="reportButton" name="reportButton" class="sidebarbtn" onclick="toggleReports()">Reports</button>
                 </li>
                 <li><button class="sidebarbtn">Settings</button></li>
-                <li><button class="sidebarbtn">Logout</button></li>
+                <li><a href="logout.php"><button class="sidebarbtn">Logout</button></a></li>
             </ul>
 
             <div class="box">

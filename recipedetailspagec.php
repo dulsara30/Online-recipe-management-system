@@ -31,6 +31,20 @@ if (isset($_GET['recipe_id'])) {
         $ingredients = $recipedetails['ingredients'];
         $process = $recipedetails['process'];
         $nutrition = $recipedetails['nutrition'];
+        $user_id = $recipedetails['user_id'];
+
+
+
+        $sql = "SELECT first_name FROM registered_user WHERE user_id = {$user_id} LIMIT 1";
+
+        $result_set = mysqli_query($connection, $sql);
+
+        if ($result_set) {
+            $posted_by = mysqli_fetch_assoc($result_set);
+            $user_id = $posted_by['first_name'];
+        } else {
+            echo 'no no no !';
+        }
     } else {
         header('Location: recipespage.php?error=recipe_not_found');
         exit();
@@ -81,8 +95,8 @@ if (isset($_GET['recipe_id'])) {
                 <img src="<?php echo $recipe_img ?>" class="recipeimg">
                 <p class="recipename"><?php echo $recipe_name ?></p>
             </div>
-            <p class="posted by"><a href="recipedetailspageprocess.php">Posted by: Username</a> </p>
-            <p class="ratings"><i class="fas fa-star"></i> Rating: 4.8</p>
+            <p class="posted by">Posted by:<?php echo $user_id ?> </p>
+            <!--<p class="ratings"><i class="fas fa-star"></i> Rating: 4.8</p>-->
             <div class="icons">
                 <article class="art">
                     <i class="fas fa-clock"></i>

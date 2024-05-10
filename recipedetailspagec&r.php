@@ -87,17 +87,18 @@ if (isset($_GET['recipe_id'])) {
                         <li><?php echo '<a href="recipedetailspagenutrition.php?recipe_id=' . $recipe_id . '">Nutrition</a></li>'; ?>
                     </button>
                     <button class="nav1">
-                        <li><?php echo '<a href="recipedetailspagec&r.php?recipe_id=' . $recipe_id . '">Comments</a></li>'; ?>
+                        <li><?php echo '<a href="recipedetailspagec&r.php?recipe_id=' . $recipe_id . '">Comment & Rating</a></li>'; ?>
                     </button>
                 </ul>
             </nav>
             <div class="content">
-                <h1>Nutrition</h1>
-                <br>
-                <p class="content1" id="content1">
-                    <?php echo $nutrition ?>
-                </p>
-
+                <h1>Comments and Ratings
+                    <br>
+                    <p class="content1" id="content1">
+                        <?php //echo $ingredients 
+                        ?>
+                    </p>
+                </h1>
             </div>
         </div>
     </div>

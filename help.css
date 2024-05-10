@@ -1,0 +1,272 @@
+/* Reset default margin and padding */
+body,
+h1,
+h2,
+h3,
+p,
+ul,
+li,
+form {
+    margin: 0;
+    padding: 0;
+}
+
+/* Set background image */
+body {
+
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family: Arial, sans-serif;
+}
+
+/* Container for centering content */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header styles */
+header {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 10px 0;
+}
+
+header h1 {
+    text-align: center;
+    color: #333;
+}
+
+nav ul {
+    list-style-type: none;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+}
+
+/* Hero section styles */
+.hero {
+    background-image: url('example2.jpg');
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px 0;
+    text-align: center;
+}
+
+
+
+/* Feedback section styles */
+.feedback {
+    float: right;
+    width: 700px;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 50px 0;
+    text-align: center;
+}
+
+.feedback h3 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.feedback form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.feedback label {
+    display: block;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.feedback input[type="text"],
+.feedback input[type="email"],
+.feedback textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+}
+
+.feedback button {
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+.feedback button:hover {
+    background-color: #555;
+}
+
+/* FAQ section styles */
+.faq {
+    float: left;
+    width: 700px;
+
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 50px 0;
+    text-align: center;
+}
+
+.container .faq h3 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.faq-item {
+    margin-bottom: 30px;
+    text-align: left;
+}
+
+.faq-item h4 {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.faq-item p {
+    color: #666;
+    line-height: 1.6;
+}
+
+/* FAQ search bar styles */
+#faq-search {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+/* FAQ section styles */
+.faq {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 50px 0;
+    text-align: center;
+}
+
+.faq h3 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.faq-item {
+    margin-bottom: 30px;
+    text-align: left;
+}
+
+.faq-item h4 {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.faq-item p {
+    color: #666;
+    line-height: 1.6;
+}
+
+/* FAQ search bar styles */
+.faq-search {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px 0;
+    text-align: center;
+}
+
+.faq-search h3 {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+#faq-search-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#faq-search-input {
+    padding: 10px;
+    margin-right: 10px;
+    width: 300px;
+    border: 1px solid #ccc;
+}
+
+#faq-search-input::placeholder {
+    color: #ccc;
+}
+
+#faq-search-input:focus {
+    outline: none;
+    border-color: #555;
+}
+
+#faq-search-input:focus::placeholder {
+    color: transparent;
+}
+
+#faq-search-form button {
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+#faq-search-form button:hover {
+    background-color: #555;
+}
+
+.message-item {
+    margin-block: 15px;
+    padding: 10px;
+    background-color: #555;
+    color: white;
+}
+
+.message-textbox {
+    width: 100%;
+    height: 30px;
+    margin-bottom: 10px;
+    background-color: #ccc;
+    font-size: 16px;
+    min-height: 50px;
+}
+
+.message-box {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: #f44336;
+    color: white;
+    padding: 15px;
+    border-radius: 5px;
+    display: none;
+    z-index: 1000;
+}
+
+.message-box.show {
+    display: block;
+}
+
+.edit-btn {
+    background-color: green;
+    color: white;
+    font-size: 16px;
+    height: 40px;
+}
+
+.delete-btn {
+    background-color: red;
+    color: white;
+    font-size: 16px;
+    height: 40px;
+    margin-left: 10px;
+}

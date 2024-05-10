@@ -21,10 +21,10 @@ footer{
     color: white;
   }
 
-  .img img{
-    margin: 10px auto;
-     width: 200px;
-     height: 200px;
+  .imgs img{
+    
+     width: 150px;
+     height: 150px;
   }
   
   footer section ul{

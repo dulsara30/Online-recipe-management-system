@@ -65,7 +65,7 @@ if (isset($_GET['recipe_id'])) {
                 <p class="recipename"><?php echo $recipe_name ?></p>
             </div>
             <p class="posted by">Posted by: <?php echo $user_id ?></p>
-            <p class="ratings"><i class="fas fa-star"></i> Rating: 4.8</p>
+            <!--<p class="ratings"><i class="fas fa-star"></i> Rating: 4.8</p>-->
             <div class="icons">
                 <article class="art">
                     <i class="fas fa-clock"></i>

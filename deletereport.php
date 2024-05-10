@@ -1,7 +1,7 @@
 <?php
 require('connection.php'); // Include your database connection file
 
-if(isset($_POST['report_no'])){
+if (isset($_POST['report_no'])) {
     $report_no = $_POST['report_no'];
 
     // Perform the deletion operation
@@ -9,7 +9,7 @@ if(isset($_POST['report_no'])){
 
     if ($connection->query($sql) === TRUE) {
         echo "Record deleted successfully";
-        
+
         // Redirect to the admin page after successful deletion
         header("Location: Admin.php");
         exit(); // Ensure that subsequent code is not executed after redirection
@@ -22,4 +22,3 @@ if(isset($_POST['report_no'])){
 
 // Close the database connection
 $connection->close();
-?>

@@ -8,7 +8,7 @@
     <nav class="nav">
       <ul>
         <li><a href="homepage.php">Home</a></li>
-        <li><a href="">About Us</a></li>
+        <li><a href="aboutUs.php">About Us</a></li>
         <li><a href="recipespage.php">Recipes</a></li>
         <li><a href="help.php">Help</a></li>
         <li><a href="login.php">Login</a></li>

@@ -15,7 +15,7 @@
                     echo "<li><a href='Admin.php'>Admin Dashboard</a></li>";
                 }
                 ?>
-                <li><a href="">About Us</a></li>
+                <li><a href="aboutUsL.php">About Us</a></li>
                 <li><a href="recipespageL.php">Recipes</a></li>
                 <li><a href="help.php">Help</a></li>
                 <li><a href="userpage.php">Welcome <?php echo $_SESSION['first_name']; ?>! </a></li>

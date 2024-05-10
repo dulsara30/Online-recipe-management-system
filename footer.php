@@ -12,15 +12,14 @@
     </ul>
   </section>
 
-  <section class="img">
+  <section class="imgs">
     <img src="https://i.pinimg.com/736x/05/ce/a9/05cea9c0f6145a493e8932ac7bad2890.jpg">
   </section>
   <section>
     <ul>
       <li><a href="">F&Qs</a></li>
       <li><a href="">CONTACT US</a></li>
-      <li><a href="">TERMS AND CONDITIONS
-        </a></li>
+      <li><a href="aboutUs.php">ABOUT US</a></li>
     </ul>
   </section>
   <section>

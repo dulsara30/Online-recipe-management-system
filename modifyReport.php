@@ -11,11 +11,11 @@ $conclusion = '';
 $admin_id = '';
 
 // Check if the form is submitted
-if(isset($_POST['report_no'])) {
+if (isset($_POST['report_no'])) {
     // Retrieve form data
     $report_no = mysqli_real_escape_string($connection, $_POST['report_no']);
     $report_name = mysqli_real_escape_string($connection, $_POST['report_name']);
-    $category = mysqli_real_escape_string($connection, $_POST['category']);                       
+    $category = mysqli_real_escape_string($connection, $_POST['category']);
     $conclusion = mysqli_real_escape_string($connection, $_POST['conclusion']);
     $admin_id = mysqli_real_escape_string($connection, $_POST['admin_id']);
 
@@ -43,34 +43,37 @@ if(isset($_POST['report_no'])) {
 
 
 <!DOCTYPE html>
-<html >
+<html>
+
 <head>
     <title>Modify Report</title>
-    <link rel ="stylesheet"  type = "text/css"  href ="reportformStyles.css">
+    <link rel="stylesheet" type="text/css" href="reportformStyles.css">
 </head>
+
 <body>
-<div class="body">
+    <div class="body">
         <div class="form-box">
             <form method="post" action="modifyReport.php" id="reportForm">
                 <h2>Modify Report</h2>
-                <br/><br/><br/>
+                <br /><br /><br />
                 <label for="report_name">Report Name:</label><br>
-                <input type="text" name="report_name" id="report_name" class="inputs" value="<?php echo $report_name; ?>"required>
-                <br/><br/><br/>
+                <input type="text" name="report_name" id="report_name" class="inputs" value="<?php echo $report_name; ?>" required>
+                <br /><br /><br />
                 <label for="category">Category:</label><br>
-                <input type="text" name="category" id="category" class="inputs" value="<?php echo $category; ?>"required>
-                <br/><br/><br/>
+                <input type="text" name="category" id="category" class="inputs" value="<?php echo $category; ?>" required>
+                <br /><br /><br />
                 <label for="conclusion">Conclusion:</label><br>
-                <textarea id="conclusion" name="conclusion" class="inputarea"required><?php echo $conclusion; ?></textarea>
-                <br/><br/><br/>
+                <textarea id="conclusion" name="conclusion" class="inputarea" required><?php echo $conclusion; ?></textarea>
+                <br /><br /><br />
                 <label for="admin_id">Admin ID:</label><br>
-                <input type="text" name="admin_id" id="admin_id" class="inputs" value="<?php echo $admin_id; ?>"required>
-                <br/><br/><br/>
+                <input type="text" name="admin_id" id="admin_id" class="inputs" value="<?php echo $admin_id; ?>" required>
+                <br /><br /><br />
                 <input type="hidden" name="report_no" value="<?php echo $report_no; ?>">
                 <input type="submit" name="modifybtn" class="clear-info" value="Save">
             </form>
         </div>
     </div>
 </body>
+
 </html>
-<?php require('footer.php')?>
+<?php require('footer.php') ?>

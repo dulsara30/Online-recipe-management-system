@@ -2,9 +2,7 @@
 <?php require('headerL.php'); ?>
 <?php
 
-if (!isset($_SESSION['user_id'])) {
-    header('Location: homepage.php');
-}
+require_once "connection.php";
 
 
 //$category = array('Appetizers', 'Soups and Salads', 'Main Dishes', 'Side Dishes', 'Breakfast', 'Brunch', 'Lunch', 'Dinner', 'Desserts', 'Beverages', 'Snacks');

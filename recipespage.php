@@ -181,4 +181,3 @@ $recipes = mysqli_query($connection, $query);
 
 </html>
 <?php require('footer.php'); ?>
-<?php mysqli_close($connection); ?>
